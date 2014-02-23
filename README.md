@@ -1,4 +1,4 @@
 musichackdemo
 =============
 
-Demo using Firebase.
+Demo using Firebase: http://lpatmo.github.io/musichackdemo/
