@@ -3,26 +3,42 @@
 <head>
 	<meta charset="utf-8">
 	<title>Music Hack Demo</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
 	  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
 </head>
 <body>
+
+  <div class="row center-block">
+  <div class="col-md-12">
+    <h1 class="align-center"> Battle of the Pitches</h1>
 	 <div id='messagesDiv'></div>
-    <input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'>
-    <button id="playSound">Changes background color to yellow</button>
-     <button id="playSound2">Changes background color to blue</button>
-	
+  </div>
+    <div class="col-md-6">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <input type='text' id='nameInput' placeholder='Name' class='form-control'>
+          <input type='text' id='messageInput' placeholder='Message' class='form-control'>
+           <button id="playSound" class="btn btn-default btn-lg">Changes background color to yellow</button>
+          <button id="playSound2" class="btn btn-default btn-lg">Changes background color to blue</button>
+      </div><!--form-group-->
+      </form><!--form-->
+    </div>
+</div><!--col-->
+</div><!--row-->
+  
 
    <script>
 
       var myDataRef = new Firebase('https://fiery-fire-4447.firebaseio.com/');
       $(document).ready(function() {
       $('#playSound').click(function(){
-      		//$('body').css('background', 'yellow');
+      		$('body').css('background', 'yellow');
       });
        $('#playSound2').click(function(){
-      	//	$('body').css('background', 'blue');
+      		$('body').css('background', 'blue');
       });
   	}); //end document ready
       $('#messageInput').keypress(function (e) {

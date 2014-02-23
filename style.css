@@ -1,0 +1,9 @@
+#messagesDiv {
+	border: 1px solid #ccc;
+	padding: 10px;
+	height: 200px;
+	overflow-y: scroll;
+}
+.align-center {
+	text-align: center;
+}
